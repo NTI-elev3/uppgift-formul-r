@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html> 
+<link rel ="stylesheet" href="CSS_login.css">
+<body>
+<h1>Register </h1>
+
+<p> (<span style="color: red">*</span>)Obligatoriska fält</p>
+<form id="registera">
+<label for="namn">Användarnamn:<span style="color: red">*</span></label><br>
+<input type="text" id="namn" name="namn"  maxlength="20" placeholder="Förnamn" required autofocus><br>
+
+<label for="lösord">Lösenord:<span style="color: red">*</span></label><br>
+<input type="password" id="lösord" name="lösord" placeholder="Lösenord101" title="Måste ha minst 6 tecken och minst en siffra"  pattern="(?=.*\d)(?=.*[a-z]).{6,}"required><br>
+
+<label for="verifiera">Verifiera lösenordet:<span style="color: red">*</span></label><br>
+<input type="password" id="verifiera" name="verifiera" placeholder="Upprepa lösenordet"><br>
+
+<label for="mail">Email:<span style="color: red">*</span></label><br>
+<input type="email" id="mail" name="mail" placeholder="bla_21@gmail.com"required><br>
+
+<label for="pnummer">Personummer:<span style="color: red">*</span></label><br>
+<input type="tel" id="pnummer" name="pnummer" placeholder="YYMMDD-XXXX" pattern="[0-9]{6}-[0-9]{4}" required><br>
+
+
+<label for="År">Värlj Åk:</label>
+<select id="År" name="År">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  </select><br>
+  
+<input type ="submit" value = "Skicka">
+</form>
+
+<script>
+document.getElementById("registrera").addEventListener("submit", function (event){
+var lösenord = document.getElementById("lösord").value;
+var verifiering = document.getElementById("verifiera").value;
+
+if (lösenord = verifiering){
+alter (Lösenordet matchar inte, försök igen!);
+event.preventDefault();
+} 
+});
+
+
+</script>
+<p><a href="file:///C:/Users/dulguun.badamgarav/Documents/login.html"> Gå till Log in </a></p>
+</body>
+</html>
